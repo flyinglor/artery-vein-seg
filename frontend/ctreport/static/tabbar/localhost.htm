@@ -1,0 +1,2789 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:5173/#/pages/report/report -->
+<html lang="zh-CN" style="font-size: 16.768px; --status-bar-height: 0px; --top-window-height: 0px; --window-left: 0px; --window-right: 0px; --window-margin: 0px; --tab-bar-height: 50px; --window-top: calc(0px + env(safe-area-inset-top)); --window-bottom: calc(50px + env(safe-area-inset-bottom));"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>if (typeof globalThis === 'undefined') {
+  window.globalThis = window
+}</script>
+
+    <script type="module" src="./localhost_files/client"></script>
+
+    
+    <script>
+      var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+        CSS.supports('top: constant(a)'))
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+        (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+    </script><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+    <title></title>
+    <!--preload-links-->
+    <!--app-context-->
+  <style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/framework/base.css">* {
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+uni-app,
+uni-page,
+uni-page-wrapper,
+uni-page-body {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+uni-page-wrapper {
+  position: relative;
+}
+
+#app,
+uni-app,
+uni-page,
+uni-page-wrapper {
+  height: 100%;
+}
+
+/* toast,modal,actionSheet,picker,layout */
+.uni-mask {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* toast,modal,actionSheet,picker */
+.uni-fade-enter-active,
+.uni-fade-leave-active {
+  transition-duration: 0.25s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.uni-fade-enter-from,
+.uni-fade-leave-active {
+  opacity: 0;
+}
+
+.uni-loading,
+uni-button[loading]:before {
+  background-color: transparent;
+  background-image: url('data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=');
+  background-repeat: no-repeat;
+}
+
+.uni-loading {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: uni-loading 1s steps(12, end) infinite;
+  background-size: 100%;
+}
+
+@keyframes uni-loading {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+html {
+  /* --UI-BG-0: #ededed; */
+  --primary-color: #007aff;
+  --UI-BG: #fff;
+  --UI-BG-1: #f7f7f7;
+  --UI-BG-2: #fff;
+  --UI-BG-3: #f7f7f7;
+  --UI-BG-4: #4c4c4c;
+  --UI-BG-5: #fff;
+  --UI-FG: #000;
+  --UI-FG-0: rgba(0, 0, 0, 0.9);
+  --UI-FG-HALF: rgba(0, 0, 0, 0.9);
+  --UI-FG-1: rgba(0, 0, 0, 0.5);
+  --UI-FG-2: rgba(0, 0, 0, 0.3);
+  --UI-FG-3: rgba(0, 0, 0, 0.1);
+}
+
+uni-page[data-type] uni-page-body {
+  background-color: transparent;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/framework/async.css">.uni-async-error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: #999;
+  padding: 100px 10px;
+  text-align: center;
+}
+.uni-async-loading {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+}
+
+.uni-async-loading .uni-loading {
+  width: 30px;
+  height: 30px;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/framework/pageHead.css">uni-page-head {
+  display: block;
+  box-sizing: border-box;
+}
+
+.uni-page-head {
+  position: fixed;
+  left: var(--window-left);
+  right: var(--window-right);
+  height: 44px;
+  height: calc(44px + constant(safe-area-inset-top));
+  height: calc(44px + env(safe-area-inset-top));
+  padding: 7px 3px;
+  padding-top: calc(7px + constant(safe-area-inset-top));
+  padding-top: calc(7px + env(safe-area-inset-top));
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 998;
+  color: #fff;
+  background-color: #000;
+  transition-property: all;
+}
+
+.uni-page-head * {
+  box-sizing: border-box;
+}
+
+.uni-page-head .uni-btn-icon {
+  overflow: hidden;
+  min-width: 1em;
+  font-style: normal;
+}
+
+.uni-page-head-titlePenetrate,
+.uni-page-head-titlePenetrate .uni-page-head-bd,
+.uni-page-head-titlePenetrate .uni-page-head-bd * {
+  pointer-events: none;
+}
+
+.uni-page-head-titlePenetrate * {
+  pointer-events: auto;
+}
+
+.uni-page-head.uni-page-head-transparent .uni-page-head-ft > div {
+  justify-content: center;
+}
+
+.uni-page-head ~ .uni-placeholder {
+  width: 100%;
+  height: 44px;
+  height: calc(44px + constant(safe-area-inset-top));
+  height: calc(44px + env(safe-area-inset-top));
+}
+
+.uni-placeholder-titlePenetrate {
+  pointer-events: none;
+}
+
+.uni-page-head-hd {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.uni-page-head-bd {
+  position: absolute;
+  left: 70px;
+  right: 70px;
+  min-width: 0;
+  -webkit-user-select: auto;
+          user-select: auto;
+}
+
+.uni-page-head-btn {
+  position: relative;
+  width: auto;
+  margin: 0 2px;
+  word-break: keep-all;
+  white-space: pre;
+  cursor: pointer;
+  font-size: 0px;
+}
+
+/* .uni-page-head-btn svg {
+} */
+
+.uni-page-head-transparent .uni-page-head-btn {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.uni-page-head-btn-red-dot::after {
+  content: attr(badge-text);
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: red;
+  color: white;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 18px;
+  overflow: hidden;
+  transform: scale(0.5) translate(40%, -40%);
+  transform-origin: 100% 0;
+}
+
+.uni-page-head-btn-red-dot[badge-text]::after {
+  font-size: 12px;
+  width: auto;
+  min-width: 18px;
+  max-width: 42px;
+  text-align: center;
+  padding: 0 3px;
+  transform: scale(0.7) translate(40%, -40%);
+}
+
+.uni-page-head-btn-select svg {
+  vertical-align: middle;
+  margin-left: 2px;
+  transform: rotate(270deg) scale(0.8);
+}
+
+.uni-page-head-search {
+  position: relative;
+  display: flex;
+  flex: 1;
+  margin: 0 2px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+.uni-page-head-search-input {
+  width: 100%;
+  height: 100%;
+  padding-left: 34px;
+  text-align: left;
+}
+
+.uni-page-head-search-input .uni-input-input:disabled {
+  pointer-events: none;
+}
+
+.uni-page-head-search-placeholder {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  padding-left: 34px;
+  overflow: hidden;
+  word-break: keep-all;
+  white-space: pre;
+}
+
+.uni-page-head-search-placeholder-right {
+  right: 0;
+}
+
+.uni-page-head-search-placeholder-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.uni-page-head-search-icon {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uni-page-head-ft {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  font-size: 13px;
+}
+
+.uni-page-head__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.uni-page-head__title .uni-loading {
+  width: 16px;
+  height: 16px;
+  margin-top: -3px;
+}
+
+.uni-page-head__title .uni-page-head__title_image {
+  width: auto;
+  height: 26px;
+  vertical-align: middle;
+}
+
+.uni-page-head-shadow {
+  overflow: visible;
+}
+
+.uni-page-head-shadow::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 5px;
+  background-size: 100% 100%;
+}
+
+uni-page-head[uni-page-head-type='default'] ~ uni-page-wrapper {
+  height: calc(100% - 44px);
+  height: calc(100% - 44px - constant(safe-area-inset-top));
+  height: calc(100% - 44px - env(safe-area-inset-top));
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/framework/tabBar.css">uni-tabbar {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 998;
+}
+
+.uni-tabbar {
+  display: flex;
+  z-index: 998;
+  box-sizing: border-box;
+}
+
+.uni-tabbar-top,
+.uni-tabbar-bottom,
+.uni-tabbar-top .uni-tabbar,
+.uni-tabbar-bottom .uni-tabbar {
+  position: fixed;
+  left: var(--window-left);
+  right: var(--window-right);
+}
+
+.uni-app--showlayout + .uni-tabbar-top,
+.uni-app--showlayout + .uni-tabbar-bottom,
+.uni-app--showlayout + .uni-tabbar-top .uni-tabbar,
+.uni-app--showlayout + .uni-tabbar-bottom .uni-tabbar {
+  left: var(--window-margin);
+  right: var(--window-margin);
+}
+
+.uni-tabbar-bottom .uni-tabbar {
+  bottom: 0;
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.uni-tabbar ~ .uni-placeholder {
+  width: 100%;
+  margin-bottom: 0;
+  margin-bottom: constant(safe-area-inset-bottom);
+  margin-bottom: env(safe-area-inset-bottom);
+}
+
+.uni-tabbar * {
+  box-sizing: border-box;
+}
+
+.uni-tabbar__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  font-size: 0;
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.uni-tabbar__bd {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.uni-tabbar__icon {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.uni-tabbar__icon.uni-tabbar__icon__diff {
+  margin-top: 0px;
+  width: 34px;
+  height: 34px;
+}
+
+.uni-tabbar__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.uni-tabbar__iconfont {
+  font-family: 'UniTabbarIconFont';
+}
+
+.uni-tabbar__label {
+  position: relative;
+  text-align: center;
+  font-size: 10px;
+}
+
+.uni-tabbar-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+}
+
+.uni-tabbar__reddot {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f43530;
+  color: #ffffff;
+  transform: translate(40%, 0%);
+}
+
+.uni-tabbar__badge {
+  width: auto;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 16px;
+  min-width: 16px;
+  padding: 0 2px;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.uni-tabbar__mid {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background-size: 100% 100%;
+}
+
+.uni-app--showtabbar uni-page-wrapper {
+  display: block;
+  height: calc(100% - var(--tab-bar-height));
+  height: calc(100% - var(--tab-bar-height) - constant(safe-area-inset-bottom));
+  height: calc(100% - var(--tab-bar-height) - env(safe-area-inset-bottom));
+}
+uni-page[data-type] uni-page-wrapper {
+  height: 100%;
+}
+.uni-app--showtabbar uni-page-wrapper::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: var(--tab-bar-height);
+  height: calc(var(--tab-bar-height) + constant(safe-area-inset-bottom));
+  height: calc(var(--tab-bar-height) + env(safe-area-inset-bottom));
+}
+.uni-app--showtabbar
+  uni-page-head[uni-page-head-type='default']
+  ~ uni-page-wrapper {
+  height: calc(100% - 44px - var(--tab-bar-height));
+  height: calc(
+    100% - 44px - constant(safe-area-inset-top) - var(--tab-bar-height) -
+      constant(safe-area-inset-bottom)
+  );
+  height: calc(
+    100% - 44px - env(safe-area-inset-top) - var(--tab-bar-height) -
+      env(safe-area-inset-bottom)
+  );
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/framework/nvue.css">[nvue] uni-view,
+[nvue] uni-label,
+[nvue] uni-swiper-item,
+[nvue] uni-scroll-view {
+  display: flex;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
+  align-items: stretch;
+  align-content: flex-start;
+}
+
+[nvue] uni-button {
+  margin: 0;
+}
+
+[nvue-dir-row] uni-view,
+[nvue-dir-row] uni-label,
+[nvue-dir-row] uni-swiper-item {
+  flex-direction: row;
+}
+
+[nvue-dir-column] uni-view,
+[nvue-dir-column] uni-label,
+[nvue-dir-column] uni-swiper-item {
+  flex-direction: column;
+}
+
+[nvue-dir-row-reverse] uni-view,
+[nvue-dir-row-reverse] uni-label,
+[nvue-dir-row-reverse] uni-swiper-item {
+  flex-direction: row-reverse;
+}
+
+[nvue-dir-column-reverse] uni-view,
+[nvue-dir-column-reverse] uni-label,
+[nvue-dir-column-reverse] uni-swiper-item {
+  flex-direction: column-reverse;
+}
+
+[nvue] uni-view,
+[nvue] uni-image,
+[nvue] uni-input,
+[nvue] uni-scroll-view,
+[nvue] uni-swiper,
+[nvue] uni-swiper-item,
+[nvue] uni-text,
+[nvue] uni-textarea,
+[nvue] uni-video {
+  position: relative;
+  border: 0px solid #000000;
+  box-sizing: border-box;
+}
+
+[nvue] uni-swiper-item {
+  position: absolute;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/input.css">uni-input {
+  display: block;
+  font-size: 16px;
+  line-height: 1.4em;
+  height: 1.4em;
+  min-height: 1.4em;
+  overflow: hidden;
+}
+
+uni-input[hidden] {
+  display: none;
+}
+
+.uni-input-wrapper,
+.uni-input-placeholder,
+.uni-input-form,
+.uni-input-input {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: inherit;
+}
+
+.uni-input-wrapper,
+.uni-input-form {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.uni-input-placeholder,
+.uni-input-input {
+  width: 100%;
+}
+
+.uni-input-placeholder {
+  position: absolute;
+  top: auto !important;
+  left: 0;
+  color: gray;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: pre;
+  word-break: keep-all;
+  pointer-events: none;
+  line-height: inherit;
+}
+
+.uni-input-input {
+  position: relative;
+  display: block;
+  height: 100%;
+  background: none;
+  color: inherit;
+  opacity: 1;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-align: inherit;
+  text-indent: inherit;
+  text-transform: inherit;
+  text-shadow: inherit;
+}
+
+.uni-input-input[type='search']::-webkit-search-cancel-button,
+.uni-input-input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+.uni-input-input::-webkit-outer-spin-button,
+.uni-input-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.uni-input-input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.uni-input-input:disabled {
+  /* 用于重置iOS14以下禁用状态文字颜色 */
+  -webkit-text-fill-color: currentcolor;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/api/modal.css">uni-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: block;
+  box-sizing: border-box;
+}
+
+.uni-modal {
+  position: fixed;
+  z-index: 999;
+  width: 80%;
+  max-width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.uni-modal * {
+  box-sizing: border-box;
+}
+
+.uni-modal__hd {
+  padding: 1em 1.6em 0.3em;
+}
+
+.uni-modal__title {
+  font-weight: 400;
+  font-size: 18px;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.uni-modal__bd {
+  padding: 1.3em 1.6em 1.3em;
+  min-height: 40px;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+  color: #999999;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.uni-modal__textarea {
+  resize: none;
+  border: 0;
+  margin: 0;
+  width: 90%;
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: #eee;
+  text-decoration: inherit;
+}
+
+.uni-modal__ft {
+  position: relative;
+  line-height: 48px;
+  font-size: 18px;
+  display: flex;
+}
+
+.uni-modal__ft:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.uni-modal__btn {
+  display: block;
+  flex: 1;
+  color: #3cc51f;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  cursor: pointer;
+}
+
+.uni-modal__btn:active {
+  background-color: #eeeeee;
+}
+
+.uni-modal__btn:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+
+.uni-modal__btn:first-child:after {
+  display: none;
+}
+
+.uni-modal__btn_default {
+  color: #353535;
+}
+
+.uni-modal__btn_primary {
+  color: #007aff;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/api/toast.css">uni-toast {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: block;
+  box-sizing: border-box;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.uni-sample-toast {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 80%;
+}
+
+.uni-simple-toast__text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  background-color: rgba(17, 17, 17, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+  max-width: 100%;
+  word-break: break-word;
+  white-space: normal;
+}
+
+uni-toast .uni-mask {
+  pointer-events: auto;
+}
+
+.uni-toast {
+  position: fixed;
+  z-index: 999;
+  width: 8em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(17, 17, 17, 0.7);
+  text-align: center;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.uni-toast * {
+  box-sizing: border-box;
+}
+
+.uni-toast__icon {
+  margin: 20px 0 0;
+  width: 38px!important;
+  height: 38px!important;
+  vertical-align: baseline!important;
+}
+
+.uni-icon_toast {
+  margin: 15px 0 0;
+}
+
+.uni-icon_toast.uni-icon-success-no-circle:before {
+  color: #ffffff;
+  font-size: 55px;
+}
+
+.uni-icon_toast.uni-loading {
+  margin: 20px 0 0;
+  width: 38px;
+  height: 38px;
+  vertical-align: baseline;
+}
+
+.uni-toast__content {
+  margin: 0 0 15px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/api/action-sheet.css">uni-actionsheet {
+  display: block;
+  box-sizing: border-box;
+}
+
+.uni-actionsheet {
+  position: fixed;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  transform: translate(0, 100%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 999;
+  visibility: hidden;
+  transition: transform 0.3s, visibility 0.3s;
+}
+
+.uni-actionsheet.uni-actionsheet_toggle {
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+.uni-actionsheet * {
+  box-sizing: border-box;
+}
+
+.uni-actionsheet__menu,
+.uni-actionsheet__action {
+  border-radius: 5px;
+  background-color: #fcfcfd;
+}
+
+.uni-actionsheet__action {
+  margin-top: 6px;
+}
+
+.uni-actionsheet__cell,
+.uni-actionsheet__title {
+  position: relative;
+  padding: 10px 6px;
+  text-align: center;
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.uni-actionsheet__title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  color: var(--UI-FG);
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.uni-actionsheet__cell:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.uni-actionsheet__cell:active {
+  background-color: #ececec;
+}
+
+.uni-actionsheet__cell:first-child:before {
+  display: none;
+}
+
+@media screen and (min-width: 500px) and (min-height: 500px) {
+  .uni-mask.uni-actionsheet__mask {
+    background: none;
+  }
+
+  .uni-actionsheet {
+    width: 300px;
+    left: 50%;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .uni-actionsheet.uni-actionsheet_toggle {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  .uni-actionsheet__menu {
+    box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .uni-actionsheet__action {
+    display: none;
+  }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/resize-sensor.css">@keyframes once-show {
+  from {
+    top: 0;
+  }
+}
+uni-resize-sensor,
+uni-resize-sensor > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+uni-resize-sensor {
+  display: block;
+  z-index: -1;
+  visibility: hidden;
+  animation: once-show 1ms;
+}
+uni-resize-sensor > div > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+uni-resize-sensor > div:first-child > div {
+  width: 100000px;
+  height: 100000px;
+}
+uni-resize-sensor > div:last-child > div {
+  width: 200%;
+  height: 200%;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/swiper.css">uni-swiper {
+  display: block;
+  height: 150px;
+}
+
+uni-swiper[hidden] {
+  display: none;
+}
+
+.uni-swiper-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0);
+}
+
+.uni-swiper-slides {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.uni-swiper-slide-frame {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.uni-swiper-dots {
+  position: absolute;
+  font-size: 0;
+}
+
+.uni-swiper-dots-horizontal {
+  left: 50%;
+  bottom: 10px;
+  text-align: center;
+  white-space: nowrap;
+  transform: translate(-50%, 0);
+}
+
+.uni-swiper-dots-horizontal .uni-swiper-dot {
+  margin-right: 8px;
+}
+
+.uni-swiper-dots-horizontal .uni-swiper-dot:last-child {
+  margin-right: 0;
+}
+
+.uni-swiper-dots-vertical {
+  right: 10px;
+  top: 50%;
+  text-align: right;
+  transform: translate(0, -50%);
+}
+
+.uni-swiper-dots-vertical .uni-swiper-dot {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.uni-swiper-dots-vertical .uni-swiper-dot:last-child {
+  margin-bottom: 0;
+}
+
+.uni-swiper-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-timing-function: ease;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.uni-swiper-dot-active {
+  background-color: #000000;
+}
+
+.uni-swiper-navigation {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -13px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.uni-swiper-navigation-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.uni-swiper-navigation-hide {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.uni-swiper-navigation-prev {
+  left: 10px;
+}
+
+.uni-swiper-navigation-prev svg {
+  margin-left: -1px;
+  left: 10px;
+}
+
+.uni-swiper-navigation-prev.uni-swiper-navigation-vertical {
+  top: 18px;
+  left: 50%;
+  margin-left: -13px;
+}
+
+.uni-swiper-navigation-prev.uni-swiper-navigation-vertical svg {
+  transform: rotate(90deg);
+  margin-left: auto;
+  margin-top: -2px;
+}
+
+.uni-swiper-navigation-next {
+  right: 10px;
+}
+
+.uni-swiper-navigation-next svg {
+  transform: rotate(180deg);
+}
+
+.uni-swiper-navigation-next.uni-swiper-navigation-vertical {
+  top: auto;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -13px;
+}
+
+.uni-swiper-navigation-next.uni-swiper-navigation-vertical svg {
+  margin-top: 2px;
+  transform: rotate(270deg);
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/swiper-item.css">uni-swiper-item {
+  display: block;
+  overflow: hidden;
+  will-change: transform;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+uni-swiper-item[hidden] {
+  display: none;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/movable-area.css">uni-movable-area {
+  display: block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+uni-movable-area[hidden] {
+  display: none;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/movable-view.css">uni-movable-view {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  cursor: grab;
+}
+
+uni-movable-view[hidden] {
+  display: none;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/api/location-view.css">.uni-system-open-location {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  z-index: 999;
+}
+
+.uni-system-open-location .map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 80px;
+  height: auto;
+}
+
+.uni-system-open-location .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.uni-system-open-location .info>.name {
+  font-size: 17px;
+  color: #111111;
+}
+
+.uni-system-open-location .info>.address {
+  font-size: 14px;
+  color: #666666;
+}
+
+.uni-system-open-location .info>.nav {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -25px;
+  background-color: #007aff;
+}
+
+.uni-system-open-location .info>.nav>svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.uni-system-open-location .map-move {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: auto;
+  cursor: pointer;
+  box-shadow: 0px 0 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.uni-system-open-location .map-move>svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.uni-system-open-location .nav-btn-back {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.uni-system-open-location .nav-btn-back>svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.uni-system-open-location .map-content {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.uni-system-open-location .map-content.fix-position {
+  top: -74px;
+  bottom: -44px;
+}
+
+.uni-system-open-location .map-content>iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.uni-system-open-location .actTonav {
+  position: absolute;
+  right: 16px;
+  bottom: 56px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/api/location-picker.css">.uni-system-choose-location {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  z-index: 999;
+}
+
+.uni-system-choose-location .map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+}
+
+.uni-system-choose-location .map-location {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  width: 32px;
+  height: 52px;
+  margin-left: -16px;
+  cursor: pointer;
+  background-size: 100%;
+}
+
+.uni-system-choose-location .map-move {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: auto;
+  cursor: pointer;
+  box-shadow: 0px 0 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.uni-system-choose-location .map-move>svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.uni-system-choose-location .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background-color: transparent;
+  background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+.uni-system-choose-location .nav-btn {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 44px;
+  padding: 6px;
+  line-height: 32px;
+  font-size: 26px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.uni-system-choose-location .nav-btn.confirm {
+  left: auto;
+  right: 0;
+}
+
+.uni-system-choose-location .nav-btn.disable {
+  opacity: 0.4;
+}
+
+.uni-system-choose-location .nav-btn>svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* line-height: inherit; */
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 3px;
+}
+
+.uni-system-choose-location .nav-btn.confirm>svg {
+  background-color: #007aff;
+  padding: 5px;
+}
+
+.uni-system-choose-location .menu {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+}
+
+.uni-system-choose-location .search {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  padding: 8px;
+  line-height: 34px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.uni-system-choose-location .search-input {
+  flex: 1;
+  height: 100%;
+  border-radius: 5px;
+  padding: 0 5px;
+  background: #ebebeb;
+}
+
+.uni-system-choose-location .search-btn {
+  margin-left: 5px;
+  color: #007aff;
+  font-size: 17px;
+  text-align: center;
+}
+
+.uni-system-choose-location .list {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 10px;
+  /* background-color: #f6f6f6; */
+}
+
+.uni-system-choose-location .list-loading {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.uni-system-choose-location .list-item {
+  position: relative;
+  padding: 10px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.uni-system-choose-location .list-item>svg {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.uni-system-choose-location .list-item.selected>svg {
+  display: block;
+}
+
+.uni-system-choose-location .list-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  left: 10px;
+  bottom: 0;
+  width: 100%;
+  background-color: #d3d3d3;
+}
+
+.uni-system-choose-location .list-item-title {
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.uni-system-choose-location .list-item-detail {
+  font-size: 12px;
+  color: #808080;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 800px) {
+  .uni-system-choose-location .map {
+    top: 0;
+    height: 100%;
+  }
+  .uni-system-choose-location .map-move {
+    bottom: 10px;
+    right: 320px;
+  }
+  .uni-system-choose-location .menu {
+    top: 54px;
+    left: auto;
+    right: 10px;
+    width: 300px;
+    bottom: 10px;
+    max-height: 600px;
+    box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.3);
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-h5/style/map.css">uni-map {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  display: block;
+}
+
+uni-map[hidden] {
+  display: none;
+}
+/* 处理高德地图 marker label 默认样式 */
+.amap-marker-label {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+/* 处理高德地图 open-location icon 被遮挡问题 */
+.amap-marker > .amap-icon > img {
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.uni-map-control {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.uni-map-control-icon {
+  position: absolute;
+  max-width: initial;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/scroll-view.css">uni-scroll-view {
+  display: block;
+  width: 100%;
+}
+
+uni-scroll-view[hidden] {
+  display: none;
+}
+
+.uni-scroll-view {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  /* display: flex; 时在安卓下会导致scrollWidth和offsetWidth一样 */
+  height: 100%;
+  max-height: inherit;
+}
+
+.uni-scroll-view-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.uni-scroll-view-scrollbar-hidden {
+  -moz-scrollbars: none;
+  scrollbar-width: none;
+}
+
+.uni-scroll-view-content {
+  width: 100%;
+  height: 100%;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Documents/HBuilderProjects/ctreport/App.vue?vue&amp;type=style&amp;index=0&amp;lang.css">
+	/*每个页面公共css */
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/view.css">uni-view {
+  display: block;
+}
+uni-view[hidden] {
+  display: none;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/button.css">uni-button {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #000000;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+uni-button[hidden] {
+  display: none !important;
+}
+
+uni-button:after {
+  content: ' ';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+uni-button[native] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+uni-button[native] .uni-button-cover-view-wrapper {
+  border: inherit;
+  border-color: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+}
+
+uni-button[native] .uni-button-cover-view-inner {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+uni-button uni-cover-view {
+  line-height: inherit;
+  white-space: inherit;
+}
+
+uni-button[type='default'] {
+  color: #000000;
+  background-color: #f8f8f8;
+}
+
+uni-button[type='primary'] {
+  color: #ffffff;
+  background-color: #007aff;
+}
+
+uni-button[type='warn'] {
+  color: #ffffff;
+  background-color: #e64340;
+}
+
+uni-button[disabled] {
+  color: rgba(255, 255, 255, 0.6);
+  cursor: not-allowed;
+}
+
+uni-button[disabled][type='default'],
+uni-button[disabled]:not([type]) {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f7f7f7;
+}
+
+uni-button[disabled][type='primary'] {
+  background-color: rgba(0, 122, 255, 0.6);
+}
+
+uni-button[disabled][type='warn'] {
+  background-color: #ec8b89;
+}
+
+uni-button[type='primary'][plain] {
+  color: #007aff;
+  border: 1px solid #007aff;
+  background-color: transparent;
+}
+
+uni-button[type='primary'][plain][disabled] {
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+uni-button[type='primary'][plain]:after {
+  border-width: 0;
+}
+
+uni-button[type='default'][plain] {
+  color: #353535;
+  border: 1px solid #353535;
+  background-color: transparent;
+}
+
+uni-button[type='default'][plain][disabled] {
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+uni-button[type='default'][plain]:after {
+  border-width: 0;
+}
+
+uni-button[plain] {
+  color: #353535;
+  border: 1px solid #353535;
+  background-color: transparent;
+}
+
+uni-button[plain][disabled] {
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+uni-button[plain]:after {
+  border-width: 0;
+}
+
+uni-button[plain][native] .uni-button-cover-view-inner {
+  padding: 0;
+}
+
+uni-button[type='warn'][plain] {
+  color: #e64340;
+  border: 1px solid #e64340;
+  background-color: transparent;
+}
+
+uni-button[type='warn'][plain][disabled] {
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+uni-button[type='warn'][plain]:after {
+  border-width: 0;
+}
+
+uni-button[size='mini'] {
+  display: inline-block;
+  line-height: 2.3;
+  font-size: 13px;
+  padding: 0 1.34em;
+}
+
+uni-button[size='mini'][native] {
+  padding: 0;
+}
+
+uni-button[size='mini'][native] .uni-button-cover-view-inner {
+  padding: 0 1.34em;
+}
+
+uni-button[loading]:not([disabled]) {
+  cursor: progress;
+}
+
+uni-button[loading]:before {
+  content: ' ';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  animation: uni-loading 1s steps(12, end) infinite;
+  background-size: 100%;
+}
+
+uni-button[loading][type='primary'] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #0062cc;
+}
+
+uni-button[loading][type='primary'][plain] {
+  color: #007aff;
+  background-color: transparent;
+}
+
+uni-button[loading][type='default'] {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #dedede;
+}
+
+uni-button[loading][type='default'][plain] {
+  color: #353535;
+  background-color: transparent;
+}
+
+uni-button[loading][type='warn'] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #ce3c39;
+}
+
+uni-button[loading][type='warn'][plain] {
+  color: #e64340;
+  background-color: transparent;
+}
+
+uni-button[loading][native]:before {
+  content: none;
+}
+
+.button-hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #dedede;
+}
+
+.button-hover[plain] {
+  color: rgba(53, 53, 53, 0.6);
+  border-color: rgba(53, 53, 53, 0.6);
+  background-color: transparent;
+}
+
+.button-hover[type='primary'] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #0062cc;
+}
+
+.button-hover[type='primary'][plain] {
+  color: rgba(0, 122, 255, 0.6);
+  border-color: rgba(0, 122, 255, 0.6);
+  background-color: transparent;
+}
+
+.button-hover[type='default'] {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #dedede;
+}
+
+.button-hover[type='default'][plain] {
+  color: rgba(53, 53, 53, 0.6);
+  border-color: rgba(53, 53, 53, 0.6);
+  background-color: transparent;
+}
+
+.button-hover[type='warn'] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #ce3c39;
+}
+
+.button-hover[type='warn'][plain] {
+  color: rgba(230, 67, 64, 0.6);
+  border-color: rgba(230, 67, 64, 0.6);
+  background-color: transparent;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Downloads/HBuilderX.4.75.2025071105/HBuilderX/plugins/uniapp-cli-vite/node_modules/@dcloudio/uni-components/style/text.css">uni-text[selectable] {
+  cursor: auto;
+  -webkit-user-select: text;
+          user-select: text;
+}
+
+uni-text {
+  white-space: pre-line;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Documents/HBuilderProjects/ctreport/pages/report/report.vue?vue&amp;type=style&amp;index=0&amp;scoped=12a8021c&amp;lang.scss">/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.report-header {
+  background: linear-gradient(to right, #22c55e, #14b8a6);
+  border-radius: 20px;
+}
+.period-btn {
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  background: transparent;
+}
+.period-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.overall-score-card {
+  background: linear-gradient(135deg, #eef2ff, #f3e8ff);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  /* vertical layout */
+  align-items: center;
+  /* horizontal center */
+  justify-content: center;
+  /* vertical center if parent has height */
+  text-align: center;
+}
+.score-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+.score-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #4f46e5;
+  display: block;
+  margin: 8px 0;
+}
+.score-desc {
+  font-size: 14px;
+  color: #6b7280;
+  display: block;
+}
+.pie-chart-mock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+}
+.pie-segment {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+.pie-segment.heart {
+  background: #ef4444;
+}
+.pie-segment.lung {
+  background: #3b82f6;
+}
+.pie-segment.metabolism {
+  background: #f97316;
+}
+.pie-segment.sleep {
+  background: #8b5cf6;
+}
+.pie-segment.exercise {
+  background: #22c55e;
+}
+.pie-segment.immunity {
+  background: #06b6d4;
+}
+.pie-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(#ff6b6b 0% 24%, #4ecdc4 24% 45%, #ffe66d 45% 64%, #1a535c 64% 85%, #5c7aea 85% 95%, #ff9f1c 95% 100%);
+  margin: auto;
+}
+.health-index-item {
+  padding: 3px 3px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+.health-index-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.index-header {
+  display: flex;
+  items-center: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.index-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 12px;
+}
+.index-name {
+  font-weight: 500;
+  display: block;
+}
+.index-desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 2px;
+  display: block;
+}
+.index-value {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+}
+.status-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.status-badge.status-excellent {
+  background: #22c55e;
+  color: white;
+}
+.status-badge.status-good {
+  background: #3b82f6;
+  color: white;
+}
+.status-badge.status-medium {
+  background: #eab308;
+  color: white;
+}
+.trend-text {
+  font-size: 12px;
+  color: #22c55e;
+}
+.progress-section {
+  margin-bottom: 12px;
+}
+.progress-section .progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+.progress-section .progress-bar .progress-fill {
+  height: 100%;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+.index-details {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+.details-title {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+.details-list .detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.details-list .detail-item .detail-label {
+  color: #6b7280;
+  font-size: 14px;
+}
+.details-list .detail-item .detail-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.details-list .detail-item .detail-value .detail-status {
+  padding: 2px 6px;
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.back-btn {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imaging-report-btn {
+  width: 100%;
+  padding: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+.imaging-report-btn:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.report-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 12px;
+}
+.report-label {
+  font-weight: 500;
+  display: block;
+}
+.report-desc {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 2px;
+  display: block;
+}
+.report-count {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.bg-blue-50 {
+  background: #eff6ff;
+}
+.bg-purple-50 {
+  background: #faf5ff;
+}
+.bg-green-50 {
+  background: #f0fdf4;
+}
+.text-blue-700 {
+  color: #1d4ed8;
+}
+.text-purple-700 {
+  color: #7c2d12;
+}
+.text-green-700 {
+  color: #15803d;
+}
+.trend-chart {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #d1d5db;
+  border-radius: 12px;
+}
+.chart-placeholder-text {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.trend-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.trend-line {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+.trend-line.heart-line {
+  background: #ef4444;
+}
+.trend-line.lung-line {
+  background: #3b82f6;
+}
+.trend-line.metabolism-line {
+  background: #f97316;
+}
+.trend-line.sleep-line {
+  background: #8b5cf6;
+}
+.chart-label {
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin-bottom: 16px;
+}
+.chart-placeholder {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-xl {
+  font-size: 20px;
+}
+.text-2xl {
+  font-size: 24px;
+}
+.text-muted-foreground {
+  color: #6b7280;
+}
+.text-green-600 {
+  color: #16a34a;
+}
+.text-green-700 {
+  color: #15803d;
+}
+.text-green-800 {
+  color: #166534;
+}
+.text-blue-600 {
+  color: #2563eb;
+}
+.text-blue-700 {
+  color: #1d4ed8;
+}
+.text-blue-800 {
+  color: #1e40af;
+}
+.text-purple-600 {
+  color: #9333ea;
+}
+.text-purple-700 {
+  color: #7c2d12;
+}
+.text-purple-800 {
+  color: #6b21a8;
+}
+.text-orange-600 {
+  color: #ea580c;
+}
+.bg-green-50 {
+  background: #f0fdf4;
+}
+.bg-blue-50 {
+  background: #eff6ff;
+}
+.bg-purple-50 {
+  background: #faf5ff;
+}
+.bg-green-500 {
+  background: #22c55e;
+}
+.bg-blue-500 {
+  background: #3b82f6;
+}
+.bg-purple-500 {
+  background: #a855f7;
+}
+.border-green-200 {
+  border-color: #bbf7d0;
+}
+.border-blue-200 {
+  border-color: #bfdbfe;
+}
+.border-purple-200 {
+  border-color: #e9d5ff;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-2 {
+  gap: 8px;
+}
+.mb-1 {
+  margin-bottom: 4px;
+}
+.mb-2 {
+  margin-bottom: 8px;
+}
+.mt-6 {
+  margin-top: 24px;
+}
+.p-6 {
+  padding: 24px;
+}
+.pb-20 {
+  padding-bottom: 80px;
+}
+.rounded-b-3xl {
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.icon {
+  font-size: 16px;
+}
+.summary-card {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 16px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card-header {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+.card-description {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+.card-content {
+  padding: 16px;
+}
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.summary-stat {
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+}
+.stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/zhenghui1/Documents/HBuilderProjects/ctreport/pages/dashboard/dashboard.vue?vue&amp;type=style&amp;index=0&amp;scoped=75e816e7&amp;lang.scss">/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.header-gradient[data-v-75e816e7] {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
+.summary-card[data-v-75e816e7] {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 16px;
+}
+.card[data-v-75e816e7] {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card-header[data-v-75e816e7] {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.card-title[data-v-75e816e7] {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+.card-description[data-v-75e816e7] {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+.card-content[data-v-75e816e7] {
+  padding: 16px;
+}
+.stat-card[data-v-75e816e7] {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.summary-stat[data-v-75e816e7] {
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+}
+.stat-header[data-v-75e816e7] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.grid[data-v-75e816e7] {
+  display: grid;
+}
+.grid-cols-2[data-v-75e816e7] {
+  grid-template-columns: 1fr 1fr;
+}
+.gap-3[data-v-75e816e7] {
+  gap: 12px;
+}
+.gap-4[data-v-75e816e7] {
+  gap: 16px;
+}
+.px-4[data-v-75e816e7] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.space-y-3 > * + *[data-v-75e816e7] {
+  margin-top: 12px;
+}
+.space-y-4 > * + *[data-v-75e816e7] {
+  margin-top: 16px;
+}
+.medication-item[data-v-75e816e7] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+.status-dot[data-v-75e816e7] {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.status-dot.taken[data-v-75e816e7] {
+  background: #22c55e;
+}
+.status-dot.pending[data-v-75e816e7] {
+  background: #d1d5db;
+}
+.medication-name[data-v-75e816e7] {
+  font-size: 14px;
+  display: block;
+}
+.medication-name.line-through[data-v-75e816e7] {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+.medication-time[data-v-75e816e7] {
+  font-size: 12px;
+  color: #6b7280;
+  display: block;
+}
+.badge[data-v-75e816e7] {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.badge.taken-badge[data-v-75e816e7] {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.badge.pending-badge[data-v-75e816e7] {
+  background: #f3f4f6;
+  color: #374151;
+}
+.goal-item .progress-bar[data-v-75e816e7] {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+.goal-item .progress-bar .progress-fill[data-v-75e816e7] {
+  height: 100%;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+.insight-item[data-v-75e816e7] {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid;
+}
+.insight-dot[data-v-75e816e7] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.insight-title[data-v-75e816e7] {
+  font-size: 14px;
+  display: block;
+}
+.insight-desc[data-v-75e816e7] {
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+.monthly-stat[data-v-75e816e7] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+.month-title[data-v-75e816e7] {
+  font-weight: 500;
+  display: block;
+}
+.month-desc[data-v-75e816e7] {
+  font-size: 14px;
+  color: #6b7280;
+  display: block;
+}
+.month-data[data-v-75e816e7] {
+  font-size: 14px;
+  display: block;
+}
+.chart-container[data-v-75e816e7] {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chart-placeholder[data-v-75e816e7] {
+  text-align: center;
+}
+.chart-text[data-v-75e816e7] {
+  color: #6b7280;
+  font-size: 16px;
+}
+.chart-line[data-v-75e816e7] {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 16px;
+  gap: 8px;
+}
+.chart-point[data-v-75e816e7] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.chart-point .point[data-v-75e816e7] {
+  width: 4px;
+  background: #8b5cf6;
+  border-radius: 2px;
+  min-height: 10px;
+}
+.text-xs[data-v-75e816e7] {
+  font-size: 12px;
+}
+.text-sm[data-v-75e816e7] {
+  font-size: 14px;
+}
+.text-xl[data-v-75e816e7] {
+  font-size: 20px;
+}
+.text-2xl[data-v-75e816e7] {
+  font-size: 24px;
+}
+.text-muted-foreground[data-v-75e816e7] {
+  color: #6b7280;
+}
+.text-green-600[data-v-75e816e7] {
+  color: #16a34a;
+}
+.text-green-700[data-v-75e816e7] {
+  color: #15803d;
+}
+.text-green-800[data-v-75e816e7] {
+  color: #166534;
+}
+.text-blue-600[data-v-75e816e7] {
+  color: #2563eb;
+}
+.text-blue-700[data-v-75e816e7] {
+  color: #1d4ed8;
+}
+.text-blue-800[data-v-75e816e7] {
+  color: #1e40af;
+}
+.text-purple-600[data-v-75e816e7] {
+  color: #9333ea;
+}
+.text-purple-700[data-v-75e816e7] {
+  color: #7c2d12;
+}
+.text-purple-800[data-v-75e816e7] {
+  color: #6b21a8;
+}
+.text-orange-600[data-v-75e816e7] {
+  color: #ea580c;
+}
+.bg-green-50[data-v-75e816e7] {
+  background: #f0fdf4;
+}
+.bg-blue-50[data-v-75e816e7] {
+  background: #eff6ff;
+}
+.bg-purple-50[data-v-75e816e7] {
+  background: #faf5ff;
+}
+.bg-green-500[data-v-75e816e7] {
+  background: #22c55e;
+}
+.bg-blue-500[data-v-75e816e7] {
+  background: #3b82f6;
+}
+.bg-purple-500[data-v-75e816e7] {
+  background: #a855f7;
+}
+.border-green-200[data-v-75e816e7] {
+  border-color: #bbf7d0;
+}
+.border-blue-200[data-v-75e816e7] {
+  border-color: #bfdbfe;
+}
+.border-purple-200[data-v-75e816e7] {
+  border-color: #e9d5ff;
+}
+.flex[data-v-75e816e7] {
+  display: flex;
+}
+.items-center[data-v-75e816e7] {
+  align-items: center;
+}
+.items-start[data-v-75e816e7] {
+  align-items: flex-start;
+}
+.justify-between[data-v-75e816e7] {
+  justify-content: space-between;
+}
+.gap-2[data-v-75e816e7] {
+  gap: 8px;
+}
+.mb-1[data-v-75e816e7] {
+  margin-bottom: 4px;
+}
+.mb-2[data-v-75e816e7] {
+  margin-bottom: 8px;
+}
+.mt-6[data-v-75e816e7] {
+  margin-top: 24px;
+}
+.p-6[data-v-75e816e7] {
+  padding: 24px;
+}
+.pb-20[data-v-75e816e7] {
+  padding-bottom: 80px;
+}
+.rounded-b-3xl[data-v-75e816e7] {
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.icon[data-v-75e816e7] {
+  font-size: 16px;
+}</style></head>
+  <body data-new-gr-c-s-check-loaded="14.1249.0" data-gr-ext-installed="" data-v-12a8021c="">
+    <div id="app" data-v-app=""><uni-app class="uni-app--showtabbar"><uni-page data-page="pages/report/report" type="tabBar"><!----><uni-page-wrapper><uni-page-body data-v-12a8021c=""><uni-view data-v-12a8021c="" class="pb-20 space-y-4"><!-- Header --><uni-view data-v-12a8021c="" class="report-header text-white p-6 rounded-b-3xl"><uni-view data-v-12a8021c="" class="flex justify-between items-start"><uni-view data-v-12a8021c=""><uni-view data-v-12a8021c="" class="text-2xl mb-1">健康报告 📊</uni-view><uni-view data-v-12a8021c="" class="text-green-100">查看您的健康指数分析</uni-view></uni-view><uni-view data-v-12a8021c="" class="flex gap-2"><uni-button data-v-12a8021c="" id="" class="back-btn">📤</uni-button><uni-button data-v-12a8021c="" id="" class="back-btn">⬇️</uni-button></uni-view></uni-view><!-- Period Selector --><uni-view data-v-12a8021c="" class="mt-6 flex gap-2"><uni-button data-v-12a8021c="" id="" class="period-btn active">本周</uni-button><uni-button data-v-12a8021c="" id="" class="period-btn">本月</uni-button><uni-button data-v-12a8021c="" id="" class="period-btn">三个月</uni-button></uni-view></uni-view><!-- Overall Health Score --><uni-view data-v-12a8021c="" class="px-4"><uni-view data-v-12a8021c="" class="overall-score-card"><uni-view data-v-12a8021c="" class="text-center"><uni-text data-v-12a8021c="" class="score-title"><span>📊 综合健康评分</span></uni-text><uni-text data-v-12a8021c="" class="score-value"><span>84.5</span></uni-text><uni-text data-v-12a8021c="" class="score-desc"><span>比上月提升 +3.2 分</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="chart-placeholder"><!-- <text class="chart-label">健康指数分布图</text> --><uni-view data-v-12a8021c="" class="chart-placeholder"><uni-view data-v-12a8021c="" class="pie-chart"></uni-view></uni-view></uni-view></uni-view></uni-view><!-- Health Indices --><uni-view data-v-12a8021c="" class="px-4"><uni-view data-v-12a8021c="" class="card"><uni-view data-v-12a8021c="" class="card-header"><uni-view data-v-12a8021c="" class="card-title">❤️ 健康指数详情</uni-view><uni-view data-v-12a8021c="" class="card-description">各项健康指标的详细分析</uni-view></uni-view><uni-view data-v-12a8021c="" class="card-content"><uni-view data-v-12a8021c="" class="space-y-4"><uni-view data-v-12a8021c="" class="health-index-item"><uni-view data-v-12a8021c="" class="index-header"><uni-view data-v-12a8021c="" class="flex items-center gap-3"><uni-view data-v-12a8021c="" class="index-icon" style="background: linear-gradient(135deg, rgb(239, 68, 68), rgb(236, 72, 153));"><uni-text data-v-12a8021c=""><span>❤️</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="index-name"><span>心脏健康指数</span></uni-text><uni-text data-v-12a8021c="" class="index-desc"><span>基于心率、血压等数据</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="text-right"><uni-text data-v-12a8021c="" class="index-value"><span>87</span></uni-text><uni-view data-v-12a8021c="" class="flex items-center gap-2"><uni-view data-v-12a8021c="" class="status-badge status-excellent">优秀</uni-view><uni-text data-v-12a8021c="" class="trend-text"><span>+2</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-12a8021c="" class="progress-section"><uni-view data-v-12a8021c="" class="flex justify-between items-center text-sm"><uni-text data-v-12a8021c=""><span>健康指数</span></uni-text><uni-text data-v-12a8021c=""><span>87/100</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="progress-bar"><uni-view data-v-12a8021c="" class="progress-fill" style="width: 87%;"></uni-view></uni-view></uni-view><!--v-if--></uni-view><uni-view data-v-12a8021c="" class="health-index-item"><uni-view data-v-12a8021c="" class="index-header"><uni-view data-v-12a8021c="" class="flex items-center gap-3"><uni-view data-v-12a8021c="" class="index-icon" style="background: linear-gradient(135deg, rgb(59, 130, 246), rgb(6, 182, 212));"><uni-text data-v-12a8021c=""><span>🫁</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="index-name"><span>肺健康指数</span></uni-text><uni-text data-v-12a8021c="" class="index-desc"><span>基于呼吸频率、血氧等</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="text-right"><uni-text data-v-12a8021c="" class="index-value"><span>82</span></uni-text><uni-view data-v-12a8021c="" class="flex items-center gap-2"><uni-view data-v-12a8021c="" class="status-badge status-good">良好</uni-view><uni-text data-v-12a8021c="" class="trend-text"><span>+1</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-12a8021c="" class="progress-section"><uni-view data-v-12a8021c="" class="flex justify-between items-center text-sm"><uni-text data-v-12a8021c=""><span>健康指数</span></uni-text><uni-text data-v-12a8021c=""><span>82/100</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="progress-bar"><uni-view data-v-12a8021c="" class="progress-fill" style="width: 82%;"></uni-view></uni-view></uni-view><!--v-if--></uni-view><uni-view data-v-12a8021c="" class="health-index-item"><uni-view data-v-12a8021c="" class="index-header"><uni-view data-v-12a8021c="" class="flex items-center gap-3"><uni-view data-v-12a8021c="" class="index-icon" style="background: linear-gradient(135deg, rgb(249, 115, 22), rgb(239, 68, 68));"><uni-text data-v-12a8021c=""><span>🔥</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="index-name"><span>新陈代谢指数</span></uni-text><uni-text data-v-12a8021c="" class="index-desc"><span>基于体重、活动量等</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="text-right"><uni-text data-v-12a8021c="" class="index-value"><span>75</span></uni-text><uni-view data-v-12a8021c="" class="flex items-center gap-2"><uni-view data-v-12a8021c="" class="status-badge status-medium">中等</uni-view><uni-text data-v-12a8021c="" class="trend-text"><span>+5</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-12a8021c="" class="progress-section"><uni-view data-v-12a8021c="" class="flex justify-between items-center text-sm"><uni-text data-v-12a8021c=""><span>健康指数</span></uni-text><uni-text data-v-12a8021c=""><span>75/100</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="progress-bar"><uni-view data-v-12a8021c="" class="progress-fill" style="width: 75%;"></uni-view></uni-view></uni-view><!--v-if--></uni-view><uni-view data-v-12a8021c="" class="health-index-item"><uni-view data-v-12a8021c="" class="index-header"><uni-view data-v-12a8021c="" class="flex items-center gap-3"><uni-view data-v-12a8021c="" class="index-icon" style="background: linear-gradient(135deg, rgb(139, 92, 246), rgb(99, 102, 241));"><uni-text data-v-12a8021c=""><span>😴</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="index-name"><span>睡眠质量指数</span></uni-text><uni-text data-v-12a8021c="" class="index-desc"><span>基于睡眠时长、深度等</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="text-right"><uni-text data-v-12a8021c="" class="index-value"><span>90</span></uni-text><uni-view data-v-12a8021c="" class="flex items-center gap-2"><uni-view data-v-12a8021c="" class="status-badge status-excellent">优秀</uni-view><uni-text data-v-12a8021c="" class="trend-text"><span>+3</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-12a8021c="" class="progress-section"><uni-view data-v-12a8021c="" class="flex justify-between items-center text-sm"><uni-text data-v-12a8021c=""><span>健康指数</span></uni-text><uni-text data-v-12a8021c=""><span>90/100</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="progress-bar"><uni-view data-v-12a8021c="" class="progress-fill" style="width: 90%;"></uni-view></uni-view></uni-view><!--v-if--></uni-view><uni-view data-v-12a8021c="" class="health-index-item"><uni-view data-v-12a8021c="" class="index-header"><uni-view data-v-12a8021c="" class="flex items-center gap-3"><uni-view data-v-12a8021c="" class="index-icon" style="background: linear-gradient(135deg, rgb(34, 197, 94), rgb(16, 185, 129));"><uni-text data-v-12a8021c=""><span>⚡</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="index-name"><span>运动活力指数</span></uni-text><uni-text data-v-12a8021c="" class="index-desc"><span>基于日常活动、运动强度</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="text-right"><uni-text data-v-12a8021c="" class="index-value"><span>78</span></uni-text><uni-view data-v-12a8021c="" class="flex items-center gap-2"><uni-view data-v-12a8021c="" class="status-badge status-good">良好</uni-view><uni-text data-v-12a8021c="" class="trend-text"><span>+4</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-12a8021c="" class="progress-section"><uni-view data-v-12a8021c="" class="flex justify-between items-center text-sm"><uni-text data-v-12a8021c=""><span>健康指数</span></uni-text><uni-text data-v-12a8021c=""><span>78/100</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="progress-bar"><uni-view data-v-12a8021c="" class="progress-fill" style="width: 78%;"></uni-view></uni-view></uni-view><!--v-if--></uni-view><uni-view data-v-12a8021c="" class="health-index-item"><uni-view data-v-12a8021c="" class="index-header"><uni-view data-v-12a8021c="" class="flex items-center gap-3"><uni-view data-v-12a8021c="" class="index-icon" style="background: linear-gradient(135deg, rgb(6, 182, 212), rgb(59, 130, 246));"><uni-text data-v-12a8021c=""><span>🛡️</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="index-name"><span>免疫力指数</span></uni-text><uni-text data-v-12a8021c="" class="index-desc"><span>基于营养、作息等综合评估</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="text-right"><uni-text data-v-12a8021c="" class="index-value"><span>85</span></uni-text><uni-view data-v-12a8021c="" class="flex items-center gap-2"><uni-view data-v-12a8021c="" class="status-badge status-excellent">优秀</uni-view><uni-text data-v-12a8021c="" class="trend-text"><span>+2</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-12a8021c="" class="progress-section"><uni-view data-v-12a8021c="" class="flex justify-between items-center text-sm"><uni-text data-v-12a8021c=""><span>健康指数</span></uni-text><uni-text data-v-12a8021c=""><span>85/100</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="progress-bar"><uni-view data-v-12a8021c="" class="progress-fill" style="width: 85%;"></uni-view></uni-view></uni-view><!--v-if--></uni-view></uni-view></uni-view></uni-view></uni-view><!-- Medical Imaging Reports --><uni-view data-v-12a8021c="" class="px-4"><uni-view data-v-12a8021c="" class="card"><uni-view data-v-12a8021c="" class="card-header"><uni-view data-v-12a8021c="" class="card-title">🔬 影像报告</uni-view><uni-view data-v-12a8021c="" class="card-description">医学影像检查报告</uni-view></uni-view><uni-view data-v-12a8021c="" class="card-content"><uni-view data-v-12a8021c="" class="space-y-4"><uni-button data-v-12a8021c="" id="" class="imaging-report-btn"><uni-view data-v-12a8021c="" class="flex items-center justify-between"><uni-view data-v-12a8021c="" class="flex items-center gap-4"><uni-view data-v-12a8021c="" class="report-icon" style="background: linear-gradient(135deg, rgb(59, 130, 246), rgb(6, 182, 212));"><uni-text data-v-12a8021c=""><span>🩻</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="report-label"><span>CT扫描</span></uni-text><uni-text data-v-12a8021c="" class="report-desc"><span>计算机断层扫描</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="report-count bg-blue-50 text-blue-700">3份报告 </uni-view></uni-view></uni-button><uni-button data-v-12a8021c="" id="" class="imaging-report-btn"><uni-view data-v-12a8021c="" class="flex items-center justify-between"><uni-view data-v-12a8021c="" class="flex items-center gap-4"><uni-view data-v-12a8021c="" class="report-icon" style="background: linear-gradient(135deg, rgb(139, 92, 246), rgb(236, 72, 153));"><uni-text data-v-12a8021c=""><span>🧠</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="report-label"><span>磁共振</span></uni-text><uni-text data-v-12a8021c="" class="report-desc"><span>核磁共振成像</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="report-count bg-purple-50 text-purple-700">2份报告 </uni-view></uni-view></uni-button><uni-button data-v-12a8021c="" id="" class="imaging-report-btn"><uni-view data-v-12a8021c="" class="flex items-center justify-between"><uni-view data-v-12a8021c="" class="flex items-center gap-4"><uni-view data-v-12a8021c="" class="report-icon" style="background: linear-gradient(135deg, rgb(34, 197, 94), rgb(20, 184, 166));"><uni-text data-v-12a8021c=""><span>🌊</span></uni-text></uni-view><uni-view data-v-12a8021c=""><uni-text data-v-12a8021c="" class="report-label"><span>B超</span></uni-text><uni-text data-v-12a8021c="" class="report-desc"><span>超声波检查</span></uni-text></uni-view></uni-view><uni-view data-v-12a8021c="" class="report-count bg-green-50 text-green-700">5份报告 </uni-view></uni-view></uni-button></uni-view></uni-view></uni-view></uni-view><!-- Health Trends --><uni-view data-v-12a8021c="" class="px-4"><uni-view data-v-12a8021c="" class="card"><uni-view data-v-12a8021c="" class="card-header"><uni-text data-v-12a8021c="" class="card-title"><span>健康趋势分析</span></uni-text><uni-text data-v-12a8021c="" class="card-description"><span>过去30天的健康指数变化</span></uni-text></uni-view><uni-view data-v-12a8021c="" class="card-content"><uni-view data-v-12a8021c="" class="trend-chart"><uni-text data-v-12a8021c="" class="chart-placeholder-text"><span>健康趋势变化图</span></uni-text><uni-view data-v-12a8021c="" class="trend-lines"><uni-view data-v-12a8021c="" class="trend-line heart-line">心脏健康</uni-view><uni-view data-v-12a8021c="" class="trend-line lung-line">肺部健康</uni-view><uni-view data-v-12a8021c="" class="trend-line metabolism-line">新陈代谢</uni-view><uni-view data-v-12a8021c="" class="trend-line sleep-line">睡眠质量</uni-view></uni-view></uni-view></uni-view></uni-view></uni-view></uni-view></uni-page-body><!----></uni-page-wrapper><!----></uni-page><uni-tabbar class="uni-tabbar-bottom" style=""><div class="uni-tabbar" style="background-color: rgb(255, 255, 255); backdrop-filter: none;"><div class="uni-tabbar-border" style="background-color: rgba(0, 0, 0, 0.33);"></div><div class="uni-tabbar__item"><div class="uni-tabbar__bd" style="height: 50px;"><div class="uni-tabbar__icon uni-tabbar__icon__diff" style="width: 24px; height: 24px;"><img src="./localhost_files/home.png"></div><div class="uni-tabbar__label" style="color: rgb(122, 126, 131); font-size: 10px; line-height: normal; margin-top: 3px;">首页</div><!----></div></div><div class="uni-tabbar__item"><div class="uni-tabbar__bd" style="height: 50px;"><div class="uni-tabbar__icon uni-tabbar__icon__diff" style="width: 24px; height: 24px;"><img src="./localhost_files/report-active.png"></div><div class="uni-tabbar__label" style="color: rgb(59, 130, 246); font-size: 10px; line-height: normal; margin-top: 3px;">报告</div><!----></div></div><div class="uni-tabbar__item"><div class="uni-tabbar__bd" style="height: 50px;"><div class="uni-tabbar__icon uni-tabbar__icon__diff" style="width: 24px; height: 24px;"><img src="./localhost_files/mall.png"></div><div class="uni-tabbar__label" style="color: rgb(122, 126, 131); font-size: 10px; line-height: normal; margin-top: 3px;">商城</div><!----></div></div><div class="uni-tabbar__item"><div class="uni-tabbar__bd" style="height: 50px;"><div class="uni-tabbar__icon uni-tabbar__icon__diff" style="width: 24px; height: 24px;"><img src="./localhost_files/profile.png"></div><div class="uni-tabbar__label" style="color: rgb(122, 126, 131); font-size: 10px; line-height: normal; margin-top: 3px;">我的</div><!----></div></div></div><div class="uni-placeholder" style="height: 50px;"></div></uni-tabbar></uni-app></div>
+    <script type="module" src="./localhost_files/main.js.download"></script>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
