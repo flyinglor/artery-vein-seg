@@ -3,7 +3,6 @@ import vtk
 import sys
 from medpy import io
 import numpy as np
-#import bpy
 
 sys.path.append('./temp')
 # import Tool_Functions.Functions as Functions
